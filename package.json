@@ -1,0 +1,24 @@
+{
+  "name": "components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuangyazhou/components.git"
+  },
+  "author": "kyz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kuangyazhou/components/issues"
+  },
+  "homepage": "https://github.com/kuangyazhou/components#readme",
+  "dependencies": {
+    "vue-loader": "^13.3.0",
+    "vue-style-loader": "^3.0.3",
+    "webpack": "^3.7.1"
+  }
+}
