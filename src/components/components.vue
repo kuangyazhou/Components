@@ -13,6 +13,9 @@
       <datepicker></datepicker>
       <logForm></logForm>
       <multiplyChooser :selections="multChoose"></multiplyChooser>
+      <!-- <regForm></regForm> -->
+      <selection :selections="districts"></selection>
+      <!-- <slideShow></slideShow> -->
       <layout></layout>
   </div>
 </template>
@@ -28,9 +31,9 @@ import kdialog from "./dialog";
 import layout from "./layout";
 import logForm from "./logForm";
 import multiplyChooser from "./multiplyChooser";
-// import regForm from "./regForm";
-// import selection from "./selection";
-// import slideShow from "./slideShow";
+import regForm from "./regForm";
+import selection from "./selection";
+import slideShow from "./slideShow";
 import { Button } from "element-ui";
 import Vue from "vue";
 Vue.use(Button);
@@ -45,7 +48,10 @@ export default {
     datepicker,
     layout,
     logForm,
-    multiplyChooser
+    multiplyChooser,
+    regForm,
+    selection,
+    slideShow
   },
   data() {
     return {
@@ -67,6 +73,32 @@ export default {
           label:'fuck the king',
           value:2
         }
+      ],
+      districts: [
+        {
+          label: '北京',
+          value: 0
+        },
+        {
+          label: '上海',
+          value: 1
+        },
+        {
+          label: '广州',
+          value: 2
+        },
+        {
+          label: '天津',
+          value: 3
+        },
+        {
+          label: '武汉',
+          value: 4
+        },
+        {
+          label: '重庆',
+          value: 5
+        },
       ],
       buyTypes: [
         {
