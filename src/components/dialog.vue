@@ -25,7 +25,8 @@ export default {
   },
   methods: {
     closeMyself() {
-      this.$emit("on-close");
+      this.isShow = false;
+      // this.$emit("on-close");
     }
   }
 };
