@@ -5,9 +5,10 @@
       <kdialog :isShow="showDialog"></kdialog>
       <counter :max="100" :min="20"></counter>
       <!-- <HelloWorld></HelloWorld> -->
-      <button @click="add+=1">打开dialog</button>
+      <!-- <div class="btn" @click="add">增加</div> -->
+      <input type="button" value="Mike" v-model="checkedNames" @click="add">
       <!-- <elButton @click="openDialog" type="success" round>计数</elButton> -->
-      <p>按钮点击了{{add}}次</p>
+      <p>按钮点击了{{number}}次</p>
   </div>
 </template>
 
@@ -25,24 +26,32 @@ import kdialog from "./dialog";
 // import regForm from "./regForm";
 // import selection from "./selection";
 // import slideShow from "./slideShow";
-import {Button} from 'element-ui';
-import Vue from 'vue';
+import { Button } from "element-ui";
+import Vue from "vue";
 Vue.use(Button);
 export default {
   name: "component",
-  components: { HelloWorld, counter,kdialog },
+  components: { HelloWorld, counter, kdialog },
   data() {
     return {
+      checkedNames: "add",
       msg: "",
-      add:0,
-      showDialog:false,
+      number: 0,
+      showDialog: false
     };
   },
-  methods:{
-    openDialog:function(e){
+  methods: {
+    add() {
+      console.log("fuck the king");
+      this.number += 1;
+    },
+    openDialog(e) {
       console.log(e);
-      this.showDialog=true;
+      this.showDialog = true;
     }
+  },
+  mounted() {
+    // this.openDialog();
   }
 };
 </script>
@@ -66,5 +75,12 @@ li {
 
 a {
   color: #42b983;
+}
+.btn {
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  border-radius: 5px;
+  background: cyan;
 }
 </style>
