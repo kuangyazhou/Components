@@ -17,28 +17,26 @@ export default {
   props: {
     isShow: {
       type: Boolean,
-      default: false
+      default: true
     }
   },
-  data () {
-    return {
-      
-    }
+  data() {
+    return {};
   },
   methods: {
-    closeMyself () {
-      this.$emit('on-close')
+    closeMyself() {
+      this.$emit("on-close");
     }
   }
-}
+};
 </script>
 
 <style scoped>
 .drop-enter-active {
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 .drop-leave-active {
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 .drop-enter {
   transform: translateY(-500px);
@@ -54,7 +52,7 @@ export default {
 }
 .dialog-cover {
   background: #000;
-  opacity: .3;
+  opacity: 0.3;
   position: fixed;
   z-index: 5;
   top: 0;
