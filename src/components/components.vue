@@ -15,6 +15,7 @@
       <multiplyChooser :selections="multChoose"></multiplyChooser>
       <!-- <regForm></regForm> -->
       <selection :selections="districts"></selection>
+      <add></add>
       <!-- <slideShow></slideShow> -->
       <layout></layout>
   </div>
@@ -34,6 +35,7 @@ import multiplyChooser from "./multiplyChooser";
 import regForm from "./regForm";
 import selection from "./selection";
 import slideShow from "./slideShow";
+import add from "./add";
 import { Button } from "element-ui";
 import Vue from "vue";
 Vue.use(Button);
@@ -51,7 +53,8 @@ export default {
     multiplyChooser,
     regForm,
     selection,
-    slideShow
+    slideShow,
+    add
   },
   data() {
     return {
@@ -60,45 +63,45 @@ export default {
       add: 0,
       showDialog: false,
       // chooseData:[{'label':abc,value:abc}]
-      multChoose:[
+      multChoose: [
         {
-          label:'abc',
-          value:0
+          label: "abc",
+          value: 0
         },
         {
-          label:'123',
-          value:1
+          label: "123",
+          value: 1
         },
         {
-          label:'fuck the king',
-          value:2
+          label: "fuck the king",
+          value: 2
         }
       ],
       districts: [
         {
-          label: '北京',
+          label: "北京",
           value: 0
         },
         {
-          label: '上海',
+          label: "上海",
           value: 1
         },
         {
-          label: '广州',
+          label: "广州",
           value: 2
         },
         {
-          label: '天津',
+          label: "天津",
           value: 3
         },
         {
-          label: '武汉',
+          label: "武汉",
           value: 4
         },
         {
-          label: '重庆',
+          label: "重庆",
           value: 5
-        },
+        }
       ],
       buyTypes: [
         {
