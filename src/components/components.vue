@@ -1,23 +1,23 @@
 <template>
   <div>
-      <h1>fuck the king</h1>
-      <bankChooser></bankChooser>
-      <kdialog :isShow="showDialog"></kdialog>
-      <counter :max="100" :min="20"></counter>
-      <!-- <HelloWorld></HelloWorld> -->
-      <!-- <div class="btn" @click="add">增加</div> -->
-      <input type="button" value="Mike" v-model="checkedNames" @click="add">
-      <!-- <elButton @click="openDialog" type="success" round>计数</elButton> -->
-      <p>按钮点击了{{add}}次</p>
-      <chooser :selections="buyTypes"></chooser>
-      <datepicker></datepicker>
-      <logForm></logForm>
-      <multiplyChooser :selections="multChoose"></multiplyChooser>
-      <!-- <regForm></regForm> -->
-      <selection :selections="districts"></selection>
-      <add></add>
-      <!-- <slideShow></slideShow> -->
-      <layout></layout>
+    <h1>fuck the king</h1>
+    <bankChooser></bankChooser>
+    <kdialog :isShow="showDialog"></kdialog>
+    <counter :max="100" :min="20"></counter>
+    <!-- <HelloWorld></HelloWorld> -->
+    <!-- <div class="btn" @click="add">增加</div> -->
+    <input type="button" value="Mike" v-model="checkedNames" @click="add">
+    <!-- <elButton @click="openDialog" type="success" round>计数</elButton> -->
+    <p>按钮点击了{{add}}次</p>
+    <chooser :selections="buyTypes"></chooser>
+    <datepicker></datepicker>
+    <logForm></logForm>
+    <multiplyChooser :selections="multChoose"></multiplyChooser>
+    <!-- <regForm></regForm> -->
+    <selection :selections="districts"></selection>
+    <add></add>
+    <!-- <slideShow></slideShow> -->
+    <layout></layout>
   </div>
 </template>
 
@@ -58,6 +58,8 @@ export default {
   },
   data() {
     return {
+      // vue 遍历data对象上的所有属性,通过object.defineProperty()方法将属性转换为getter/setter,vue内部追踪这些依赖,在修改时触发相应变化,完成模型到视图的双向绑定.依赖项触发时通知watecher重新计算新值,触发render()函数重新渲染
+      // Vue组件不能检测到实例化后data属性的添加,删除.若想修改,可调用Vue.set(object,key,value);
       checkedNames: "add",
       msg: "",
       add: 0,
