@@ -8,6 +8,9 @@
     <!-- <div class="btn" @click="add">增加</div> -->
     <input type="button" value="Mike" v-model="checkedNames" @click="add">
     <!-- <elButton @click="openDialog" type="success" round>计数</elButton> -->
+    <el-button type="primary" @click="openDialog">主要按钮</el-button>
+    <el-date-picker v-model="value6" size="small" type="daterange" range-separator="至" start-placeholder="开始日期" end-placeholder="结束日期">
+    </el-date-picker>
     <p>按钮点击了{{add}}次</p>
     <chooser :selections="buyTypes"></chooser>
     <datepicker></datepicker>
@@ -36,9 +39,10 @@ import regForm from "./regForm";
 import selection from "./selection";
 import slideShow from "./slideShow";
 import add from "./add";
-import { Button } from "element-ui";
+import ElementUI from "element-ui";
+import "element-ui/lib/theme-chalk/index.css";
 import Vue from "vue";
-Vue.use(Button);
+Vue.use(ElementUI);
 export default {
   name: "component",
   components: {
@@ -63,6 +67,7 @@ export default {
       checkedNames: "add",
       msg: "",
       add: 0,
+      value6: "",
       showDialog: false,
       // chooseData:[{'label':abc,value:abc}]
       multChoose: [
