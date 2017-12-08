@@ -4,6 +4,7 @@
     <bankChooser></bankChooser>
     <kdialog :isShow="showDialog"></kdialog>
     <counter :max="100" :min="20"></counter>
+    <Vprogress></Vprogress>
     <!-- <HelloWorld></HelloWorld> -->
     <!-- <div class="btn" @click="add">增加</div> -->
     <input type="button" value="Mike" v-model="checkedNames" @click="add">
@@ -39,6 +40,7 @@ import regForm from "./regForm";
 import selection from "./selection";
 import slideShow from "./slideShow";
 import add from "./add";
+import Vprogress from "./progress";
 import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 import Vue from "vue";
@@ -58,7 +60,8 @@ export default {
     regForm,
     selection,
     slideShow,
-    add
+    add,
+    Vprogress
   },
   data() {
     return {
