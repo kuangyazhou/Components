@@ -16,6 +16,7 @@
     <chooser :selections="buyTypes"></chooser>
     <datepicker></datepicker>
     <Vtable :activeLine="1" :activeRow="3"></Vtable>
+    <Bread :options="breadData"></Bread>
     <logForm></logForm>
     <multiplyChooser :selections="multChoose"></multiplyChooser>
     <!-- <regForm></regForm> -->
@@ -41,6 +42,7 @@ import regForm from "./regForm";
 import selection from "./selection";
 import slideShow from "./slideShow";
 import add from "./add";
+import Bread from './bread';
 import Vprogress from "./progress";
 import Vtable from "./table";
 import ElementUI from "element-ui";
@@ -53,6 +55,7 @@ export default {
     HelloWorld,
     counter,
     kdialog,
+    Bread,
     bankChooser,
     chooser,
     datepicker,
@@ -76,6 +79,7 @@ export default {
       value6: "",
       showDialog: false,
       // chooseData:[{'label':abc,value:abc}]
+      breadData:[{label:'客单价',value:1},{label:'南湖店',value:2},{label:'斯凯',value:3}],
       multChoose: [
         {
           label: "abc",
