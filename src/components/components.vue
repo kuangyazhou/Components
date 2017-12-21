@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="component">
     <h1>fuck the king</h1>
     <bankChooser></bankChooser>
-    <kdialog :isShow="showDialog"></kdialog>
+    <!-- <kdialog :isShow="showDialog"></kdialog> -->
     <counter :max="100" :min="20"></counter>
     <Vprogress></Vprogress>
     <!-- <HelloWorld></HelloWorld> -->
@@ -15,6 +15,7 @@
     <p>按钮点击了{{add}}次</p>
     <chooser :selections="buyTypes"></chooser>
     <datepicker></datepicker>
+    <Vtable :activeLine="1" :activeRow="3"></Vtable>
     <logForm></logForm>
     <multiplyChooser :selections="multChoose"></multiplyChooser>
     <!-- <regForm></regForm> -->
@@ -41,6 +42,7 @@ import selection from "./selection";
 import slideShow from "./slideShow";
 import add from "./add";
 import Vprogress from "./progress";
+import Vtable from "./table";
 import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 import Vue from "vue";
@@ -61,7 +63,8 @@ export default {
     selection,
     slideShow,
     add,
-    Vprogress
+    Vprogress,
+    Vtable
   },
   data() {
     return {
@@ -167,5 +170,8 @@ a {
   height: 30px;
   border-radius: 5px;
   background: cyan;
+}
+.component {
+  background: radial-gradient(ellipse 40% 40%, #004c9e, #002259);
 }
 </style>
