@@ -16,6 +16,28 @@
     <chooser :selections="buyTypes"></chooser>
     <datepicker></datepicker>
     <Vtable :activeLine="1" :activeRow="3"></Vtable>
+    <div :style="{width:'60%'}">
+      <el-table :data="tableData" border style="width: 100%">
+        <el-table-column fixed prop="date" label="日期" width="150">
+        </el-table-column>
+        <el-table-column prop="name" label="姓名" width="120">
+        </el-table-column>
+        <el-table-column prop="province" label="省份" width="120">
+        </el-table-column>
+        <el-table-column prop="city" label="市区" width="120">
+        </el-table-column>
+        <el-table-column prop="address" label="地址" width="300">
+        </el-table-column>
+        <el-table-column prop="zip" label="邮编" width="120">
+        </el-table-column>
+        <el-table-column fixed="right" label="操作" width="100">
+          <template slot-scope="scope">
+            <el-button @click="handleClick(scope.row)" type="text" size="small">查看</el-button>
+            <el-button type="text" size="small">编辑</el-button>
+          </template>
+        </el-table-column>
+      </el-table>
+    </div>
     <Bread :options="breadData"></Bread>
     <logForm></logForm>
     <multiplyChooser :selections="multChoose"></multiplyChooser>
@@ -24,6 +46,7 @@
     <add></add>
     <!-- <slideShow></slideShow> -->
     <layout></layout>
+
   </div>
 </template>
 
@@ -42,7 +65,7 @@ import regForm from "./regForm";
 import selection from "./selection";
 import slideShow from "./slideShow";
 import add from "./add";
-import Bread from './bread';
+import Bread from "./bread";
 import Vprogress from "./progress";
 import Vtable from "./table";
 import ElementUI from "element-ui";
@@ -79,7 +102,11 @@ export default {
       value6: "",
       showDialog: false,
       // chooseData:[{'label':abc,value:abc}]
-      breadData:[{label:'客单价',value:1},{label:'南湖店',value:2},{label:'斯凯',value:3}],
+      breadData: [
+        { label: "客单价", value: 1 },
+        { label: "南湖店", value: 2 },
+        { label: "斯凯", value: 3 }
+      ],
       multChoose: [
         {
           label: "abc",
@@ -133,6 +160,40 @@ export default {
           label: "紫色版",
           value: 2
         }
+      ],
+      tableData: [
+        {
+          date: "2016-05-03",
+          name: "王小虎",
+          province: "上海",
+          city: "普陀区",
+          address: "上海市普陀区金沙江路 1518 弄",
+          zip: 200333
+        },
+        {
+          date: "2016-05-02",
+          name: "王小虎",
+          province: "上海",
+          city: "普陀区",
+          address: "上海市普陀区金沙江路 1518 弄",
+          zip: 200333
+        },
+        {
+          date: "2016-05-04",
+          name: "王小虎",
+          province: "上海",
+          city: "普陀区",
+          address: "上海市普陀区金沙江路 1518 弄",
+          zip: 200333
+        },
+        {
+          date: "2016-05-01",
+          name: "王小虎",
+          province: "上海",
+          city: "普陀区",
+          address: "上海市普陀区金沙江路 1518 弄",
+          zip: 200333
+        }
       ]
     };
   },
@@ -140,6 +201,9 @@ export default {
     openDialog: function(e) {
       console.log(e);
       this.showDialog = true;
+    },
+    handleClick(e) {
+      console.log(e);
     }
   },
   mounted() {
