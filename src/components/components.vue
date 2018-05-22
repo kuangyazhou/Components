@@ -1,23 +1,23 @@
 <template>
   <div class="component">
-    <h1>fuck the king</h1>
-    <bankChooser></bankChooser>
+    <!-- <h1>fuck the king</h1> -->
+    <!-- <bankChooser></bankChooser> -->
     <!-- <kdialog :isShow="showDialog"></kdialog> -->
-    <counter :max="100" :min="20"></counter>
-    <Vprogress></Vprogress>
+    <!-- <counter :max="100" :min="20"></counter> -->
+    <!-- <Vprogress></Vprogress> -->
     <!-- <HelloWorld></HelloWorld> -->
     <!-- <div class="btn" @click="add">增加</div> -->
-    <input type="button" value="Mike" v-model="checkedNames" @click="add">
+    <!-- <input type="button" value="Mike" v-model="checkedNames" @click="add"> -->
     <!-- <elButton @click="openDialog" type="success" round>计数</elButton> -->
-    <el-button type="primary" @click="openDialog">主要按钮</el-button>
-    <el-date-picker v-model="value6" size="small" type="daterange" range-separator="至" start-placeholder="开始日期" end-placeholder="结束日期">
-    </el-date-picker>
-    <p>按钮点击了{{add}}次</p>
-    <chooser :selections="buyTypes"></chooser>
-    <datepicker></datepicker>
-    <Vtable :activeLine="1" :activeRow="3"></Vtable>
-    <div :style="{width:'60%'}">
-      <el-table :data="tableData" border style="width: 100%">
+    <!-- <el-button type="primary" @click="openDialog">主要按钮</el-button> -->
+    <!-- <el-date-picker v-model="value6" size="small" type="daterange" range-separator="至" start-placeholder="开始日期" end-placeholder="结束日期"> -->
+    <!-- </el-date-picker> -->
+    <!-- <p>按钮点击了{{add}}次</p> -->
+    <!-- <chooser :selections="buyTypes"></chooser> -->
+    <!-- <datepicker></datepicker> -->
+    <!-- <Vtable :activeLine="1" :activeRow="3"></Vtable> -->
+    <!-- <div :style="{width:'60%'}"> -->
+    <!-- <el-table :data="tableData" border style="width: 100%">
         <el-table-column fixed prop="date" label="日期" width="150">
         </el-table-column>
         <el-table-column prop="name" label="姓名" width="120">
@@ -37,15 +37,15 @@
           </template>
         </el-table-column>
       </el-table>
-    </div>
-    <Bread :options="breadData"></Bread>
+    </div> -->
+    <!-- <Bread :options="breadData"></Bread>
     <logForm></logForm>
-    <multiplyChooser :selections="multChoose"></multiplyChooser>
+    <multiplyChooser :selections="multChoose"></multiplyChooser> -->
     <!-- <regForm></regForm> -->
-    <selection :selections="districts"></selection>
-    <add></add>
+    <!-- <selection :selections="districts"></selection> -->
+    <!-- <add></add> -->
     <!-- <slideShow></slideShow> -->
-    <layout></layout>
+    <!-- <layout></layout> -->
     <Vtree :model="treeData"></Vtree>
   </div>
 </template>
@@ -266,6 +266,6 @@ a {
     background: cyan;
 }
 .component {
-    background: radial-gradient(ellipse 40% 40%, #004c9e, #002259);
+    /* background: radial-gradient(ellipse 40% 40%, #004c9e, #002259); */
 }
 </style>
